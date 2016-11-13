@@ -43,34 +43,10 @@
         font-size: 16px;
         line-height: 30px;
         float: left;
+        clear: left;
     }
     </style>
-    <script type="text/javascript">
-    var changeText = document.getElementById('tips');
-    function sub (thisSub) {
-        
-        if (thisSub.yourName.value == null|| thisSub.yourName.value == '') {
-            // changeText.innerHTML = '名字不能为空！';
-            // changeText.style.color = 'red';
-            alert('名字不能为空！');
-            console.log('kong');
-            // return false;
-        } 
-        else if (thisSub.yourName.value.replace(/[^\x00-\xff]/g,"aa").length < 4) {
-            // changeText.innerHTML = '字符串过短！';
-            // changeText.style.color = 'red';
-            alert('字符串过短！你输入的长度为：' + thisSub.yourName.value.replace(/[^\x00-\xff]/g,"aa").length);
-            return false;
-        } else if (thisSub.yourName.value.replace(/[^\x00-\xff]/g,"aa").length > 16) {
-            // changeText.innerHTML = '字符串过长！';
-            // changeText.style.color = 'red';
-            alert('字符串过长！你输入的长度为：' + thisSub.yourName.value.replace(/[^\x00-\xff]/g,"aa").length);
-            return false;
-        }
-        return false;
-    }
-
-    </script>
+    
 </head>
 <body>
 <div id="container">
@@ -80,6 +56,35 @@
     </form>
     <p id="tips"> * 必填，长度为4~16个字符</p>
 </div>
+<script type="text/javascript">
+    var changeText = document.querySelector('#tips');
+    
+    function sub (thisSub) {
+        var zheng = thisSub.yourName.value.replace(/[^\x00-\xff]/g,"aa").length;
+        if (thisSub.yourName.value == null|| thisSub.yourName.value == '') {
+            changeText.innerHTML = '名字不能为空！';
+            changeText.style.color = 'red';
+            // alert('名字不能为空！');
+            console.log('kong');
+            // return false;
+        } 
+        else if (zheng < 4) {
+            changeText.innerHTML = '字符串过短！';
+            changeText.style.color = 'red';
+            // alert('字符串过短！你输入的长度为：' + thisSub.yourName.value.replace(/[^\x00-\xff]/g,"aa").length);
+            return false;
+        } else if (zheng > 16) {
+            changeText.innerHTML = '字符串过长！';
+            changeText.style.color = 'red';
+            // alert('字符串过长！你输入的长度为：' + thisSub.yourName.value.replace(/[^\x00-\xff]/g,"aa").length);
+            return false;
+        } else {
+            changeText.innerHTML = '正确！';
+            changeText.style.color = 'green';
+        }
+        return false;
+    }
 
+    </script>
 </body>
 </html>
