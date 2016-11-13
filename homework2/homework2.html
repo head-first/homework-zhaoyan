@@ -69,17 +69,16 @@
             // return false;
         } 
         else if (zheng < 4) {
-            changeText.innerHTML = '字符串过短！';
+            changeText.innerHTML = '字符串过短！你输入的字符个数为：' + zheng;
             changeText.style.color = 'red';
-            // alert('字符串过短！你输入的长度为：' + thisSub.yourName.value.replace(/[^\x00-\xff]/g,"aa").length);
             return false;
         } else if (zheng > 16) {
-            changeText.innerHTML = '字符串过长！';
+            changeText.innerHTML = '字符串过长！你输入的字符个数为：' + zheng;
             changeText.style.color = 'red';
             // alert('字符串过长！你输入的长度为：' + thisSub.yourName.value.replace(/[^\x00-\xff]/g,"aa").length);
             return false;
         } else {
-            changeText.innerHTML = '正确！';
+            changeText.innerHTML = '正确！你输入的字符个数为：' + zheng;
             changeText.style.color = 'green';
         }
         return false;
