@@ -20,7 +20,7 @@
         border: 1px solid gray;
         border-radius: 5px;
         float: left;
-        background-color: #FAFFBD;
+        background-color: #FFF3EE;
         color: gray;
         font-size: 25px;
         line-height: 40px;
@@ -61,23 +61,24 @@
     
     function sub (thisSub) {
         var zheng = thisSub.yourName.value.replace(/[^\x00-\xff]/g,"aa").length;
+        // 判断是否为空
         if (thisSub.yourName.value == null|| thisSub.yourName.value == '') {
             changeText.innerHTML = '名字不能为空！';
             changeText.style.color = 'red';
-            // alert('名字不能为空！');
             console.log('kong');
-            // return false;
-        } 
-        else if (zheng < 4) {
+            return false;
+        } else if (zheng < 4) {
+            // 判断字符串是否过短
             changeText.innerHTML = '字符串过短！你输入的字符个数为：' + zheng;
             changeText.style.color = 'red';
             return false;
         } else if (zheng > 16) {
+            // 判断字符串是否过长
             changeText.innerHTML = '字符串过长！你输入的字符个数为：' + zheng;
             changeText.style.color = 'red';
-            // alert('字符串过长！你输入的长度为：' + thisSub.yourName.value.replace(/[^\x00-\xff]/g,"aa").length);
             return false;
         } else {
+            // 如果输入合法，则输出正确
             changeText.innerHTML = '正确！你输入的字符个数为：' + zheng;
             changeText.style.color = 'green';
         }
