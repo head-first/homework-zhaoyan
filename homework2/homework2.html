@@ -47,7 +47,6 @@
     </style>
     <script type="text/javascript">
     var changeText = document.getElementById('tips');
-    var text = document.getElementById('name');
     function sub (thisSub) {
         
         if (thisSub.yourName.value == null|| thisSub.yourName.value == '') {
@@ -76,7 +75,7 @@
 <body>
 <div id="container">
     <form action="" onsubmit="return sub(this);" method="POST">
-        <input type="text" name="yourName" id="name">
+        <input type="text" name="yourName" placeholder="请输入名称" id="name">
         <input type="submit" value="验证" id="check">
     </form>
     <p id="tips"> * 必填，长度为4~16个字符</p>
