@@ -60,7 +60,7 @@
     var changeText = document.querySelector('#tips');
     
     function sub (thisSub) {
-        var zheng = thisSub.yourName.value.replace(/[^\x00-\xff]/g,"aa").length;
+        var zheng = thisSub.yourName.value.replace(/[^\x00-\xff]/g, 'aa').length;
         // 判断是否为空
         if (thisSub.yourName.value == null|| thisSub.yourName.value == '') {
             changeText.innerHTML = '名字不能为空！';
