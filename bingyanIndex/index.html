@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>冰岩作坊</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- 图标 -->
+    <link rel="shortcut icon" href="image/favicon.ico">
+</head>
+<body>
+<div id="container">
+    <!-- 顶部logo -->
+    <a href="http://www.bingyan.net/">
+        <div id="header">
+            <img src="image/headLogo.png" height="67" width="455">
+        </div>
+    </a>
+    <!-- 背景 -->
+    <div id="main">  
+    </div>
+    <div id="mainLogo">
+        <img src="image/logo.png">
+    </div>
+    <!-- 中心圆圈 -->
+    <div id="mainPics">
+        <div class="pic" id="pic1">
+            <div class="cover">
+            </div>
+            <div class="hover">
+                <img src="image/cover1.png">
+            </div>
+            <div class="name">
+                <p class="p1">Team Introduction</p>
+                <p class="p2">团队介绍</p>
+            </div>
+        </div>
+        <div class="pic" id="pic2">
+            <div class="cover">
+            </div>
+            <div class="hover">
+                <img src="image/cover2.png">
+            </div>
+            <div class="name">
+                <p class="p1">Group Introduction</p>
+                <p class="p2">各组介绍</p>
+            </div>
+        </div>
+        <div class="pic" id="pic3">
+            <div class="cover">
+            </div>
+            <div class="hover">
+                <img src="image/cover3.png">
+            </div>
+            <div class="name">
+                <p class="p1">Protfolio</p>
+                <p class="p2">陈列室</p>
+            </div>
+        </div>
+        <div class="pic" id="pic4">
+            <div class="cover">
+            </div>
+            <div class="hover">
+                <img src="image/cover4.png">
+            </div>
+            <div class="name">
+                <p class="p1">Members</p>
+                <p class="p2">成员风采</p>
+            </div>
+        </div>
+        <div class="pic" id="pic5">
+            <div class="cover">
+            </div>
+            <div class="hover">
+                <img src="image/cover5.png">
+            </div>
+            <div class="name">
+                <p class="p1">Join Us</p>
+                <p class="p2">加入我们</p>
+            </div>
+        </div>
+    </div>
+    <!-- 下方黄色logo -->
+    <div id="yellowLogo">
+        <img src="image/yellowLogo.png">
+    </div>
+    <div id="introduce">
+        <p>我们是最具亲和力的校园互联网团队。轻松活跃的团队氛围是团队成员收获成长的源动力，是团队
+            不断进步、走向成熟的保证。追求卓越是每个人冰岩人所标榜的工作理念。用最新的Web知识充实自己，
+            用最严格的要求审视自己的每一个创意、每一件设计、每一行代码。</p>
+    </div>
+    <div id="contact">
+        <div id="contactLeft">
+            <img src="image/map.jpg" height="255" width="397">
+            <p>冰岩作坊团队主管：常明明<br>
+            工作邮箱：cmm@bingyan.net<br>
+            办公电话：(027) 87793534<br>
+            传真：(027) 87542401（停用）<br>
+            地址：中国 武汉 华中科技大学（东校区）启明学院亮胜楼1006</p>
+        </div>
+        <div id="contactRight">
+            <form>
+                <p>姓名<span class="yellow">*</span></p>
+                <input class="common"></input>
+                <p>邮箱<span class="yellow">*</span></p>
+                <input class="common"></input>
+                <p>电话</p>
+                <input class="common"></input>
+                <p>信息</p>
+                <input class="information"></input>
+                <input id="sub" type="submit" value="发送信息"></input>
+            </form>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div id="footer">
+        <div id="connection">
+            <p>友情链接</p>
+            <a href="http://www.hust.edu.cn">华中科技大学</a>
+            <a href="http://app.hustonline.net/">大软坊</a>
+            <a href="http://www.hustonline.net/">华中大在线</a>
+            <a href="http://2shoujie.com/">二手市场</a>
+            <a href="http://ik.hustonline.net/">iKnow</a>
+            <a href="http://hust.ixuanxiu.com/">爱选修</a>
+            <a href="http://pic.hust.edu.cn/">华中大相册</a>
+            <a href="http://hustpass.hustonline.net/">华中大校园通</a>
+            <a href="http://www.kmgtp.org/">蝴蝶-HUDBT</a>
+            <a href="http://echo.hustonline.net/">回音</a>
+        </div>
+        <div id="claim">
+            <p>2014(C) Powered by <img src="image/by.png" height="17" width="16">Bingyan Studio  All Rights Reserved.</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var main = document.getElementById('main');
+    var pic1 = document.getElementById('pic1');
+    var pic2 = document.getElementById('pic2');
+    var pic3 = document.getElementById('pic3');
+    var pic4 = document.getElementById('pic4');
+    var pic5 = document.getElementById('pic5');
+    console.log(pic1);
+    function change (obj, address) {
+        obj.onmouseover = function () {
+            main.style.backgroundImage = address;
+        }
+        obj.onmouseout = function () {
+            main.style.backgroundImage = 'url(./image/index.jpg)';
+        }
+    }
+    change(pic1, 'url(./image/bg1.jpg)');
+    change(pic2, 'url(./image/bg2.jpg)');
+    change(pic3, 'url(./image/bg3.jpg)');
+    change(pic4, 'url(./image/bg4.jpg)');
+    change(pic5, 'url(./image/bg5.jpg)');
+</script>
+</body>
+</html>
